@@ -59,18 +59,40 @@ const presidents = [
 //presidents.filter(president => president.party === "D").forEach(president => console.log(president.name));
 
 //2)Filter all presidents to leave only one term Republican presidents HINT use If statement
-//a)without if statement
+//A)without if statement
 //presidents.filter(president => president.party === "R").filter(president => president.terms === 1).forEach(president => console.log(president.name))
 
-//b)WITH IF STATEMENT
-for (let i = 0; i < presidents.length; i++) {
+//B)WITH IF STATEMENT
+/*for (let i = 0; i < presidents.length; i++) {
   if (presidents[i].party === "R" && presidents[i].terms === 1) {
     console.log(presidents[i].name);
   }
+}*/
+
+//C)using only what we learned so far and including IF STATEMENT
+/*function oneTermR(x) {
+  if (x.party === "R" && x.terms === 1) {
+    console.log(x.name);
+  }
 }
+presidents.forEach(president => oneTermR(president));*/
 
 //3) return only the last three presidents
+//presidents.slice(0, 3).forEach(president => console.log(president.name))
 
 //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
+//A)Using two filters
+//presidents.filter(president => president.party === "D").filter(president => president.terms === 2).forEach(president => console.log(president.name))
+
+//B)Using only one filter
+//presidents.filter(president => president.party === "D" && president.terms === 2).forEach(president => console.log(president.name))
+
+//how would you use slice?
 
 //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
+/*let x = presidents.filter(president => president.name === "Lyndon Johnson")
+if (x[0].terms === 2) {
+  alert("LBJ served two terms")
+} else {
+  alert("LBJ was one and done")
+}*/
